@@ -1,0 +1,22 @@
+# Input as a team might hand it over: terse, with fields omitted when the default is fine.
+services:
+  - name: api
+    port: 8080
+    tier: web
+    extra_ports: [8081, 8082]
+    env:
+      LOG_LEVEL: debug
+      REGION: us-east-1
+  - name: worker
+    port: 9090
+    tier: batch
+    replicas: 4
+  - name: cache
+    port: 6379
+    tier: data
+    healthcheck:
+      path: /ping
+  - name: admin
+    port: 3000
+    tier: web
+    replicas: 2

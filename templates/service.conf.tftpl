@@ -1,0 +1,9 @@
+# generated for ${name} (${tier} tier, ${replicas} replicas)
+listen ${port};
+healthcheck ${health_path};
+%{ for p in extra_ports ~}
+also_listen ${p};
+%{ endfor ~}
+%{ for line in env_lines ~}
+env ${line};
+%{ endfor ~}
