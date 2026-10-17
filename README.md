@@ -2,7 +2,7 @@
 
 The Terraform expression idioms that come up most in real configs, each with a test: defaults with `merge`, grouping with `...`, filtering, `flatten` to composite keys, `cidrsubnets`, `setproduct`, `templatefile`, and why `for_each` beats `count`.
 
-> **What is verified.** No provider and no resources, only locals and outputs, so there is nothing to deploy. On 2026-10-17, with Terraform 1.16.5 on Windows, `terraform test` passed 8 of 8 runs. CI repeats this on Linux.
+> **What is verified.** No provider and no resources, only locals and outputs, so there is nothing to deploy. On 2026-10-17, with Terraform 1.16.5 on Windows, `terraform test` passed 8 of 8 runs. GitHub Actions (Linux) ran the same commands and passed (2026-10-17).
 
 ## The input
 
